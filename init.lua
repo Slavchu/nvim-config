@@ -10,7 +10,7 @@ if not vim.uv.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
-
+vim.api.nvim_set_option_value("clipboard", "unnamedplus", { scope = "global" })
 local lazy_config = require "configs.lazy"
 
 -- load plugins
